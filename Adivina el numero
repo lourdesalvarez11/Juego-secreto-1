@@ -1,0 +1,26 @@
+let numeroMaximoPosible=50; // Número máximo posible para el número secreto
+let numeroSecreto = Math.floor(Math.random()*numeroMaximoPosible) + 1; // Genera un número aleatorio entre 1 y 20
+console.log(numeroSecreto); // Para depuración, muestra el número secreto en la consola
+let numeroUsuario = 0;
+let intentos=1;
+let maximosIntentos = 5; // Número máximo de intentos permitidos
+//let palabraVeces= "vez";
+while(numeroUsuario != numeroSecreto){
+    let numeroUsuario = parseInt(prompt(`Me indicas un numero de 1 al ${numeroMaximoPosible}`));
+    console.log (typeof(numeroUsuario)); // Para depuración, muestra el número ingresado por el usuario
+    if (numeroSecreto == numeroUsuario){
+        alert(`Acertaste, el numero es: ${numeroSecreto}.Lo hiciste en ${intentos} ${intentos ==1?"vez":"veces"}`);
+    }else{ 
+        if(numeroUsuario > numeroSecreto){
+            alert("El numero es menor");
+        }else{
+            alert("El numero es mayor");}
+            intentos++;
+            //palabraVeces = "veces";
+            if (intentos > maximosIntentos){ {
+            alert(`Llegaste al numero maximo de ${maximosIntentos} intentos`); 
+            break;
+    }
+            }
+    }
+}
